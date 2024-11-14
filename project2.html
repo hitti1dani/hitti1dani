@@ -1,0 +1,46 @@
+<project1.html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Project Page</title>
+      <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+      <div class="project-container" id="projectContainer">
+        <!-- Left text section -->
+        <div class="text-section">
+          <h1>Creative Coding with p5.js </h1>
+          <p>The second project shifted focus to animation through creative coding using p5.js, a JavaScript library designed for artists and designers. This project allowed us to unleash our creativity while learning about coding fundamentals.
+        </p>
+        <p> Key Features and Insights:<br>
+        - Animation: We created various animations by manipulating shapes, colors, and movements within p5.js. The library's functions made it easy to draw graphics on the canvas and animate them over time.<br>
+        - Utilizing ChatGPT Prompts: By leveraging prompts from ChatGPT, I was able to brainstorm ideas for animations that I might not have considered otherwise. This interaction expanded my creative horizons and provided inspiration for unique visual effects.<br>
+        - Understanding Code: Through experimentation with different animations, I gained a deeper understanding of how code operates behind the scenes. I learned about functions in p5.js that control frame rates, object properties, and user interactions.<br>
+        - Experimentation: The process involved numerous trials to find the right balance between complexity and simplicity in our animations. This hands-on approach made coding enjoyable as we observed how small changes could lead to significant visual impacts.<br>
+        </p>
+        <p>This project was not only fun but also instrumental in solidifying my knowledge of animation principles and coding logic.</p>
+        </div>
+        <!-- Right image section -->
+        <div class="image-section">
+          <img src="project-image1.jpg" alt="Project Image 1">
+          <img src="project-image2.jpg" alt="Project Image 2">
+        </div>
+      </div>
+    
+      <script>
+        // Scroll effect to reveal the container
+        document.addEventListener('scroll', function() {
+          const container = document.getElementById('projectContainer');
+          const containerPosition = container.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+    
+          if (containerPosition < screenPosition) {
+            container.classList.add('visible');
+          }
+        });
+      </script>
+    </body>
+    </html>
+    

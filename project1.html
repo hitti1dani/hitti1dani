@@ -1,0 +1,46 @@
+<project1.html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Project Page</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+    <body>
+      <div class="project-container" id="projectContainer">
+        <!-- Left text section -->
+        <div class="text-section">
+          <h1>Interactive Game with Scratch </h1>
+          <p>In this project, we delved into the world of game development using Scratch, an easy-to-use programming platform developed by MIT. The primary goal was to create a local multiplayer game, and I chose to draw inspiration from volleyball. The game mechanics were designed to mimic a shooting game while adhering to the rules of volleyball, providing a unique twist on traditional gameplay.</p>
+          <p>
+            Key Features and Insights:<br>
+            - How it works: Players control characters that serve, pass, and spike the ball, utilizing Scratch's sprite and backdrop functionalities. The game incorporates scoring systems and player movements that reflect the dynamics of volleyball.<br>
+            - Scratch Elements: We employed various Scratch features such as loops, conditionals, and event listeners. For instance, loops were used to continuously check for player input, ensuring smooth gameplay. Conditionals determined the game's flow, such as scoring points when the ball lands in the opponent's area.<br>
+            - Problem-Solving: This project encouraged me to think outside the box. I explored multiple solutions using Scratch's building blocks—sprites, sounds, and graphics—to enhance gameplay. It was fascinating to see how different combinations could yield varied gaming experiences.<br>
+            - Testing: Working with peers allowed us to test each other's games, providing valuable feedback that refined our designs. This collaborative aspect highlighted the importance of user experience in game development.<br>
+            <br> 
+            Overall, this project not only honed my programming skills but also deepened my understanding of game design principles and the importance of creativity in coding.
+            </p>
+        </div>
+        <!-- Right image section -->
+        <div class="image-section">
+          <img src="project-image1.jpg" alt="Project Image 1">
+          <img src="project-image2.jpg" alt="Project Image 2">
+        </div>
+      </div>
+    
+      <script>
+        // Scroll effect to reveal the container
+        document.addEventListener('scroll', function() {
+          const container = document.getElementById('projectContainer');
+          const containerPosition = container.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+    
+          if (containerPosition < screenPosition) {
+            container.classList.add('visible');
+          }
+        });
+      </script>
+    </body>
+    </html>
+    
