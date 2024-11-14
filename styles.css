@@ -1,0 +1,339 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif Display', serif;
+    background-image: url('path/to/your-texture.jpg'); /* Update with your image path */
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.15); /* Adjusted to 0.3 for higher opacity */
+   
+}
+
+/* Header Styling */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: rgba(255, 255, 255, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Darker Grotesque', sans-serif;
+    margin-bottom: 1rem;
+    color: #333;
+}
+/* Basic styling for layout */
+.projects-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.project {
+  perspective: 1000px;
+  width: 200px; /* adjust as needed */
+  text-align: center;
+}
+
+/* Card styling for 3D flip effect */
+.project-card {
+  position: relative;
+  width: 100%;
+  height: 200px; /* adjust as needed */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Flip effect on hover */
+.project:hover .project-card {
+  transform: rotateY(180deg);
+}
+
+/* Front and back images */
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Styling for project links */
+.project-link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-link:hover {
+  color: #9d7ee4;
+}
+
+
+.left-menu nav {
+    display: flex;
+    gap: 1rem;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.2rem;
+    justify-content: flex-start;
+}
+
+.left-menu nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: inherit;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Section Styling */
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+}
+
+section h2, section p {
+    font-family: 'Darker Grotesque', sans-serif;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.text-content p:hover {
+    color: #aeb2a6;
+}
+
+.section-image {
+    width: 150%;
+    max-width: 500px;
+    transform-origin: center;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    position: relative;
+    right: -1rem; /* Move image slightly to the right */
+    cursor: pointer;
+}
+
+.section-image:hover {
+    transform: rotateY(180deg); /* Flip animation on hover */
+    opacity: 0.8; /* Slight transparency on hover */
+}
+
+.dotted-border {
+    border: 2px dotted #aeb2a6;
+    padding: 5px;
+}
+
+/* Fullscreen Section Styling */
+#intro, #About, #Projects, #Other, #Contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+/* Animations */
+@keyframes fadeInOut {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.text-content p:hover, h2:hover {
+    color: #97ab6f;
+}
+/* Contact Section */
+#Contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+    height: 100vh;
+    color: #333;
+}
+
+.contact-left {
+    flex: 1;
+    max-width: 40%;
+}
+
+.contact-left h2 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 2.5rem;
+}
+
+.contact-left .subheading {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.contact-left .contact-info {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.contact-right {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact-right .form-subheading {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+
+.contact-right input[type="text"],
+.contact-right input[type="email"],
+.contact-right textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    font-family: 'Noto Serif Display', serif;
+}
+
+.contact-right input[type="text"],
+.contact-right input[type="email"] {
+    height: 2rem;
+}
+
+.contact-right textarea {
+    height: 6rem;
+    resize: none;
+}
+/* Project Image Grid */
+.project-images-section {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; /* Adjust for more or less spacing */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image-item {
+    position: relative;
+    border: 2px dotted #aeb2a6;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px; /* Optional for rounded corners */
+}
+/* Flip Card Styling */
+.other-images {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.flip-card {
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.flip-back {
+    background-color: #333;
+    transform: rotateY(180deg);
+}
+
